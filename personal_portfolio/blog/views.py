@@ -9,6 +9,7 @@ def all_blogs(request):
 
 
 
-
+def detail(request ,blog_id):
+	return render(request,'blog/detail.html',{'id':blog_id})
 
 
