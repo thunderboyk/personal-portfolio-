@@ -1,3 +1,8 @@
+{% extends 'port/core.html' %}
+
+{% block content %}
+
+
 <h1>Lakshay's has written {{ blogs.count }} blog{{ blogs.count|pluralize }} </h1>
 
 
@@ -7,9 +12,11 @@
 
 <h5> {{ blog.date|date:'M D Y' }}</h5>
 
-<p>{{ blog.discription|truncatechars:100  }}</p>
+<p>{{ blog.discription|striptags|truncatechars:100  }}</p>
 
 
 
 {% endfor %}
 
+
+{% endblock %}
