@@ -1,0 +1,38 @@
+
+{% extends 'port/core.html' %}
+
+{% block content %}
+<h1>Lakshya's Portfolio</h1>
+
+{% load static %}
+
+<!-- Blog link -->
+<a href='{% url "blog:all_blogs" %}' class="btn-link">Blog</a>
+<br>
+
+<!-- Resume link -->
+<a href='{% static "portfolio/That One _ Whiplash Edit _.mp4" %}' class="btn-link">Resume here</a>
+<br>
+
+<!-- Main image -->
+<img src='{% static "portfolio/Design 1.jpeg" %}' alt="Design 1" class="main-image">
+
+<!-- Project listings -->
+<div class="projects-container">
+    {% for project in projects %}
+    <div class="project-card">
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+        <img src="{{ project.image.url }}" alt="{{ project.title }}">
+        
+        <!-- Optional project URL -->
+        {% if project.url %}
+            <a href="{{ project.url }}" target="_blank" class="btn-link">View Project</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

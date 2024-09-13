@@ -1,0 +1,70 @@
+/* General container settings */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 20px; /* Adds space between the cards */
+    padding: 20px;
+}
+
+/* Card settings */
+.project-card {
+    background-color: #f8f9fa; /* Light background for the card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center; /* Centers text within the card */
+    padding: 20px;
+    transition: transform 0.3s ease; /* Adds a hover effect */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
+}
+
+/* Image styling */
+.project-card img {
+    width: 100%; /* Makes the image take the full width of the card */
+    height: auto;
+    border-bottom: 2px solid #dee2e6;
+    max-height: 200px; /* Resizes the image */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+}
+
+/* Text beneath the image */
+.project-card h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+/* Main image styling */
+.main-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Button link styling */
+.btn-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: #0056b3;
+}
